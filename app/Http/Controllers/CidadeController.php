@@ -2,27 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Cidade;
 
-// use App\Usuario;
-use Illuminate\Http\Request;
-
-
-class HomeController extends Controller
+class CidadeController extends Controller
 {
-    //
-
-    public function viewHome(){
+    public function viewCidade(){
         // $usuario = new Usuario();
         // $listaUsuarios = $usuario->all();
         // esses codigos podem ser substituidos pelo de baixo
-        
+         
         $listaCidades = Cidade::all();
-        
-        
-        // dd($listaUsuarios); = outro var dump
-
 
         return view('cidade',['listaCidades'=>$listaCidades]);
-    }
+}
 }
